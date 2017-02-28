@@ -30,10 +30,8 @@ def dir_argument(string):
 class ArgumentParser(argparse.ArgumentParser):
 
     def print_help(self):
-        print(self.format_help())
-        # BUG: https://github.com/xolox/python-humanfriendly/issues/7
-        #import humanfriendly.terminal
-        #humanfriendly.terminal.usage(self.format_help())
+        import humanfriendly.terminal
+        humanfriendly.terminal.usage(self.format_help())
 
 class Script():
 
